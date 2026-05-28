@@ -1,0 +1,40 @@
+# OpenClaw 敏感文件排除
+
+# 配置文件（包含 API Key 等敏感信息）
+openclaw.json
+*.bak
+
+# 身份认证
+identity/
+devices/
+
+# 日志
+logs/
+*.log
+
+# 插件扩展（体积大，不需要版本控制）
+extensions/
+
+# 媒体缓存
+media/
+
+# 其他运行时文件
+completions/
+canvas/
+qqbot/
+openclaw-weixin/
+agents/
+
+# 隐藏目录
+.clawdhub/
+.clawhub/
+.openclaw/
+
+# Node.js
+node_modules/
+package-lock.json
+
+# 临时文件
+*.tmp
+*.swp
+*~
