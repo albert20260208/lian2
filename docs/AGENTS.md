@@ -70,6 +70,38 @@ When writing files, avoid creating duplicate content within **the same directory
 
 **Rationale:** Prevents accidental duplication and keeps the workspace clean. The user should decide if the new content is truly different or should replace/update the existing file.
 
+## 🔒 Skill Installation Security
+
+**Before installing ANY external skill (ClawdHub, GitHub, or other sources):**
+
+1. ⚠️ **Run Skill Vetter first** - Use the `skill-vetter` skill to review
+2. 📋 **Generate vetting report** - Show risk level and red flags
+3. 🤔 **Wait for user approval** - Don't install without confirmation
+4. 📝 **Record installed skills** - Log what was installed and when
+
+**Risk Levels:**
+| Level | Action |
+|-------|--------|
+| 🟢 LOW | Can install after basic review |
+| 🟡 MEDIUM | Full code review required |
+| 🔴 HIGH | Human approval required |
+| ⛔ EXTREME | Do NOT install |
+
+**Red Flags (reject immediately):**
+- curl/wget to unknown URLs
+- Sends data to external servers
+- Requests credentials/tokens/API keys
+- Reads ~/.ssh, ~/.aws, ~/.config without clear reason
+- Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md
+- Uses base64 decode
+- Uses eval()/exec() with external input
+- Modifies system files outside workspace
+- Obfuscated code
+- Requests sudo/elevated permissions
+- Accesses browser cookies/sessions
+
+**Remember:** *Paranoia is a feature.* 🔒 When in doubt, don't install.
+
 ## External vs Internal
 
 **Safe to do freely:**
