@@ -102,6 +102,26 @@ When writing files, avoid creating duplicate content within **the same directory
 
 **Remember:** *Paranoia is a feature.* 🔒 When in doubt, don't install.
 
+## ⏰ Cron & Reminder Automation
+
+**Creating cron jobs and reminders:**
+
+- ✅ **Auto-execute** - Create cron jobs directly without asking for confirmation
+- 📋 **Inform after creation** - Tell the user what was created, don't ask permission first
+- 🎯 **Use for**: reminders, periodic checks, scheduled tasks, learning sessions
+- 📝 **Log to memory** - Record important cron creations in daily memory files
+
+**When to create crons:**
+- User requests recurring reminders
+- Periodic check-ins would be helpful
+- Scheduled learning/review sessions
+- Routine maintenance tasks
+
+**Format preference:**
+- Use `cron` action with proper schedule
+- Set `sessionTarget: "main"` for systemEvent payloads
+- Include clear, actionable reminder text
+
 ## External vs Internal
 
 **Safe to do freely:**
