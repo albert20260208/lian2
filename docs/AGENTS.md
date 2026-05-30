@@ -52,6 +52,24 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
 
+## 📁 File Writing Rules
+
+### "Same Directory + Two Levels Deep" Limit
+
+When writing files, avoid creating duplicate content within **the same directory and two levels below it**.
+
+**Example:**
+- If `2026-work/塞班工作/塞班物业催款及回复/记录.md` exists
+- Don't create `2026-work/塞班工作/塞班物业催款及回复/记录-副本.md` or similar duplicates
+
+**What to do when duplicates are detected:**
+1. ⚠️ **Stop and alert the user** - Don't write automatically
+2. 📋 **Show the existing file path** and the proposed new file path
+3. 🤔 **Wait for user confirmation** before proceeding
+4. ✅ **Write only after explicit approval**
+
+**Rationale:** Prevents accidental duplication and keeps the workspace clean. The user should decide if the new content is truly different or should replace/update the existing file.
+
 ## External vs Internal
 
 **Safe to do freely:**
