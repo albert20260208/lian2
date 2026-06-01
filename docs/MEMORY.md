@@ -5,6 +5,38 @@
 
 ---
 
+## ⚡ 快速提示 - 阿里云账单查询
+
+**下次查询阿里云账单时，按以下步骤：**
+
+1. **检查 CLI 配置**
+   ```bash
+   aliyun configure list
+   ```
+
+2. **查询余额**
+   ```bash
+   aliyun bssopenapi QueryAccountBalance
+   ```
+
+3. **查询交易记录**
+   ```bash
+   aliyun bssopenapi QueryAccountTransactions \
+     --CreateTimeStart 2026-05-25T00:00:00Z \
+     --CreateTimeEnd 2026-06-01T23:59:59Z
+   ```
+
+4. **如果配置丢失**
+   - 查看：`~/.openclaw/configs/ALIYUN-CREDENTIALS.md`
+   - 恢复：`~/.openclaw/configs/restore-config.sh`
+
+5. **快速查询（推荐）**
+   ```bash
+   ~/lian2/scripts/check-alibaba.sh
+   ```
+
+---
+
 ## 🔑 关键配置
 
 ### 阿里云账号
